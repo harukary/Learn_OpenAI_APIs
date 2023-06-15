@@ -5,3 +5,5 @@ pandas
 wikipedia
 tiktoken
 docarray
+ipykernel
+tqdm
