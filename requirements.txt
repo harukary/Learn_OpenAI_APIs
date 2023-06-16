@@ -7,3 +7,4 @@ tiktoken
 docarray
 ipykernel
 tqdm
+unstructured
