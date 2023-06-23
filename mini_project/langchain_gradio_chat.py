@@ -1,7 +1,8 @@
 import gradio as gr
 from langchain.chat_models import ChatOpenAI
 from langchain.chains import ConversationChain
-
+import os, datetime
+os.environ["no_proxy"] = "localhost,127.0.0.1,::1"
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -34,10 +35,14 @@ with gr.Blocks(css=css) as demo:
     clear = gr.ClearButton([msg, chatbot])
 
     def user(message, chat_history):
+        # now = datetime.datetime.now().strftime("%m/%d %H:%M")
+        # return "", chat_history + [[message+f'[{now}]', None]]
         return "", chat_history + [[message, None]]
     
     def respond(chat_history):
         response = chat(chat_history[-1][0])
+        # now = datetime.datetime.now().strftime("%m/%d %H:%M")
+        # chat_history[-1][1] = response+f'[{now}]'
         chat_history[-1][1] = response
         return chat_history
 
