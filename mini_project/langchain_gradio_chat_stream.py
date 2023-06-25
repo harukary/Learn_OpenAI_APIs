@@ -48,13 +48,18 @@ conversation = ConversationChain(memory=memory, prompt=prompt, llm=llm, verbose=
 
 # フロントエンド
 css = """
+.gradio-container {background-color: #7494C0}
 .message.user{
-    background: #06c755 !important;
-}"""
+    background: #8DE055 !important;
+}
+.message.assistant{
+    background: #EDF1EE !important;
+}
+"""
 
 with gr.Blocks(css=css) as demo:
     # コンポーネント
-    chatbot = gr.Chatbot()
+    chatbot = gr.Chatbot(height=600)
     msg = gr.Textbox()
     clear = gr.Button("Clear")
 

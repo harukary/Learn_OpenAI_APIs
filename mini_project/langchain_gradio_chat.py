@@ -30,7 +30,7 @@ css = """
 """
 
 with gr.Blocks(css=css) as demo:
-    chatbot = gr.Chatbot()
+    chatbot = gr.Chatbot(height=600)
     msg = gr.Textbox()
     clear = gr.ClearButton([msg, chatbot])
 
