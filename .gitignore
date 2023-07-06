@@ -1,3 +1,6 @@
 .env
 .venv
 Pipfile*
+*.pkl
+*.bin
+*.parquet
