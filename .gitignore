@@ -2,6 +2,7 @@
 .venv
 Pipfile*
 *.pkl
+*.pyc
 *.bin
 *.parquet
 
