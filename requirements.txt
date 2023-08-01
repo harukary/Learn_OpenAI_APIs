@@ -8,3 +8,4 @@ docarray
 ipykernel
 tqdm
 unstructured
+pydantic
