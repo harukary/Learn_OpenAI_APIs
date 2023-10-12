@@ -1,0 +1,13 @@
+version: '3'
+services:
+  chat_ui:
+    image: langchain_chat
+    container_name: langchain_chat_stream
+    ports:
+      - 7860:7860
+    networks:
+      - langchain_chat
+    environment:
+      - no_proxy=localhost,127.0.0.1
+networks:
+  langchain_chat:
